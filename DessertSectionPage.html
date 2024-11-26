@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mitch's Desserts</title>
+    <link rel="stylesheet" type="text/css" href="DessertSectionStyleSheet.css" />
+    <script src="functions.js"> </script>
+  </head>
+  <body>
+    <nav class="navBar"> 
+      <h1> MITCH'S DESSERTS </h1> 
+      <input class="search-input"> </input> 
+      <ul class="list-wrapper"> 
+          <li class="list-item"> 
+              <a href="LandingPage.html" style="text-decoration: none; color: black;" > Home </a>
+          </li>
+          <li class="list-item"> 
+              <a href="DessertSectionPage.html" style="text-decoration: none; color: black;" > Desserts </a>
+          </li>
+          <li class="list-item"> 
+              <a href="AboutMePage.html" style="text-decoration: none; color: black;" > About </a>
+          </li>
+      </ul>
+    </nav>
+    <div class="container">   
+        <div class="sideBar" id="sidebar"> 
+            <div class="button-wrapper"> 
+              <button id="toggle-btn" onclick="toggleSidebar()" class="dropdown-btn"> 
+                    <img src="Assets/icons/picture/cart-shopping-solid.svg"> 
+              </button>
+          </div>
+            <div class="cart-container">
+                <div class="cart-summary">
+              </div>
+            </div>
+            <div class="paymentButton"> 
+              <button> <a href="PaymentPage.html"> BUY NOW </a></button>
+            </div>
+        </div>
+
+        <div class="second-container"> 
+          <div class="items">
+              <div class="goodsContainer"> 
+                <img
+                  class="crinkles1"
+                  src="Assets/icons/picture/cookies1.jpg"
+                  style="width: 60%; height: 40%; border-radius: 90px"
+                />
+                <div class="descriptionItem2">
+                  <h1>COOKIES</h1>
+                  <h3>Sold by a pack of 3</h3>
+                  <h2>$55</h2>
+                  <p> Cookies are the comforting classics of baked goods. They're versatile, coming in endless varieties like chocolate chip, oatmeal raisin, or snickerdoodle. A fresh cookie feels like a warm hug: soft and chewy with a little crispness on the edges, often studded with delightful surprises like chunks of chocolate, dried fruits, or nuts. Each bite is a nostalgic reminder of childhood kitchen adventures or quiet moments with a cup of milk or coffee. </p>
+                  <button> Click me </button>
+                </div>
+              </div>
+
+              <div class="goodsContainer">
+                <img
+                  class="brownies1"
+                  src="Assets/icons/picture/brownies1.jpg"
+                  style="width: 60%; height: 40%; border-radius: 90px"
+                />
+                <div class="descriptionItem2">
+                  <h1>BROWNIES</h1>
+                  <h3>Sold by a pack of 3</h3>
+                  <h2>$55</h2>
+                  <P> Brownies are a rich and fudgy delight that captures the essence of chocolate in every bite. These decadent treats can be made with a variety of ingredients, from nuts to caramel swirls, and they often have a chewy texture that melts in your mouth. Perfect for satisfying your sweet tooth, brownies are a favorite for gatherings, parties, or simply indulging yourself at home. Whether served warm with a scoop of ice cream or enjoyed as is, brownies are a timeless dessert that never fails to impress. </P>
+                  <button> Click me </button>
+                </div>
+              </div>
+
+              <div class="goodsContainer">
+                <img
+                  class="crinkles1"
+                  src="Assets/icons/picture/crinkles1.jpg"
+                  style="width: 60%; height: 40%; border-radius: 90px"
+                />
+                <div class="descriptionItem2">
+                  <h1>CRINKLES</h1>
+                  <h3>Sold by a pack of 3</h3>
+                  <h2>$55</h2>
+                  <p> Crinkles are delightful chocolate cookies that are soft and chewy on the inside with a beautiful powdered sugar coating on the outside. These treats have a rich chocolate flavor and a unique texture that creates a satisfying contrast. As they bake, they develop their signature cracks, giving them their name. Perfect for any occasion, crinkles are often enjoyed with a glass of milk or a cup of coffee, making them a beloved choice for dessert lovers everywhere. </p>
+                  <button> Click me </button>
+                </div>
+              </div>
+
+              <div class="goodsContainer">
+                <img
+                  class="crinkles1"
+                  src="Assets/icons/picture/Cake1.jpg"
+                  style="width: 60%; height: 40%; border-radius: 90px"
+                />
+                <div class="descriptionItem2">
+                  <h1>Cake 1</h1>
+                  <h3> Solge by a pack of 6</h3>
+                  <h2>$55</h2>
+                  <p> Cake 1 is a classic dessert that embodies the essence of celebration. With its moist layers and fluffy frosting, this cake is perfect for birthdays, anniversaries, or any special occasion. The combination of flavors and textures will transport you to a world of sweetness, where every slice is a moment of joy. Whether enjoyed on its own or paired with ice cream, Cake 1 is sure to be a crowd-pleaser, making it a staple in any dessert lineup. </p>
+                  <button> Click me </button>
+                </div>
+              </div>
+
+              <div class="goodsContainer">
+                <img
+                  class="brownies1"
+                  src="Assets/icons/picture/Cake2.jpg"
+                  style="width: 60%; height: 40%; border-radius: 90px"
+                />
+                <div class="descriptionItem2">
+                  <h1>Cake 2</h1>
+                  <h3> Valentine Cake </h3>
+                  <h2>$55</h2>
+                  <p> Cake 2, also known as the Valentine Cake, is a romantic treat designed to celebrate love and affection. Adorned with beautiful decorations and often infused with flavors like strawberry or chocolate, this cake is perfect for sharing with someone special. Its tender crumb and delightful frosting create a memorable dessert experience that captures the spirit of romance. Whether for a Valentine's Day celebration or a sweet surprise, this cake is a heartfelt gesture that speaks volumes.
+                  </p>
+                  <button> Click me </button>
+                </div>
+              </div>
+          </div>
+
+          <div class="items">
+              <div class="goodsContainer"> 
+                <img
+                  class="crinkles1"
+                  src="Assets/icons/picture/Cake3.jpg"
+                  style="width: 60%; height: 40%; border-radius: 90px"
+                />
+                <div class="descriptionItem2">
+                  <h1>Cake 3</h1>
+                  <h3> Birthday Cake</h3>
+                  <h2>$55</h2>
+                  <p> Cake 3 is the quintessential birthday cake, designed to make your special day even more memorable. With its vibrant layers and delicious frosting, this cake is a centerpiece that brings joy to any celebration. Each slice is filled with flavor, often complemented by fun decorations like sprinkles or candles. Whether you prefer classic vanilla, rich chocolate, or a fruity twist, Cake 3 is the ultimate indulgence that makes birthdays truly special. </p>
+                  <button> Click me </button>
+                </div>
+              </div>
+
+              <div class="goodsContainer">
+                <img
+                  class="brownies1"
+                  src="Assets/icons/picture/pic2.jpg"
+                  style="width: 60%; height: 40%; border-radius: 90px"
+                />
+                <div class="descriptionItem2">
+                  <h1>BROWNIES</h1>
+                  <h3>Sold by a pack of 6</h3>
+                  <h2>$55</h2>
+                  <P> These brownies, sold by a pack of 6, are the perfect treat for sharing or indulging in a little bit of chocolatey goodness. Each brownie is rich, fudgy, and packed with flavor, making them an irresistible snack for any chocolate lover. Ideal for parties, picnics, or simply enjoying at home, these brownies are sure to satisfy your cravings and leave you wanting more. </P>
+                  <button> Click me </button>
+                </div>
+              </div>
+
+              <div class="goodsContainer">
+                <img
+                  class="crinkles1"
+                  src="Assets/icons/picture/crinkles1.jpg"
+                  style="width: 60%; height: 40%; border-radius: 90px"
+                />
+                <div class="descriptionItem2">
+                  <h1>CRINKLES</h1>
+                  <h3>Sold by a pack of 6</h3>
+                  <h2>$55</h2>
+                  <p> These crinkles, sold by a pack of 6, are a delightful treat that combines the rich taste of chocolate with a soft, chewy texture. Each cookie is coated in powdered sugar, giving them a sweet finish that contrasts beautifully with their fudgy interior. Perfect for sharing with friends or enjoying as a personal treat, these crinkles are a must-have for any dessert lover.</p>
+                  <button> Click me </button>
+                </div>
+              </div>
+
+              <div class="goodsContainer">
+                <img
+                  class="crinkles1"
+                  src="Assets/icons/picture/cookies1.jpg"
+                  style="width: 60%; height: 40%; border-radius: 90px"
+                />
+                <div class="descriptionItem2">
+                  <h1>COOKIES</h1>
+                  <h3>Sold by a pack of 6</h3>
+                  <h2>$55</h2>
+                  <p> These cookies, sold by a pack of 6, are the perfect combination of classic flavors and homemade goodness. Each cookie is baked to perfection, offering a delightful crunch on the outside and a soft, chewy center. Ideal for sharing or enjoying as a snack, these cookies are a timeless favorite that brings comfort and joy with every bite. </p>
+                  <button> Click me </button>
+                </div>
+              </div>
+
+              <div class="goodsContainer">
+                <img
+                  class="brownies1"
+                  src="Assets/icons/picture/brownies1.jpg"
+                  style="width: 60%; height: 40%; border-radius: 90px"
+                />
+                <div class="descriptionItem2">
+                  <h1>BROWNIES</h1>
+                  <h3>Sold by a pack of 6</h3>
+                  <h2>$55</h2>
+                  <p> These brownies, sold by a pack of 6, are a chocolate lover's dream come true. Each brownie is rich, dense, and filled with chocolatey goodness, making them an indulgent treat for any occasion. Whether enjoyed on their own or paired with a scoop of ice cream, these brownies are perfect for satisfying your sweet cravings and sharing with friends.</p>
+                  <button> Click me </button>
+                </div>
+              </div>
+          </div>
+        </div>
+    </div>
+        <div id="modal" class="modal">
+          <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div id="modal-details"></div>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <div class="soc1">
+              <a href="https://www.facebook.com/jededison.tenorio.7/" target="_blank"><i class='bx bxl-facebook'></i></a>
+              <a href="https://x.com/iSnipyy" target="_blank"><i class='bx bxl-twitter' ></i></a>
+              <a href="https://www.instagram.com/jeditnrio/" target="_blank"><i class='bx bxl-instagram' ></i></a>
+            </div>
+          <p> Copyright © 2024 Mitch's Desserts | All Rights Reserved </p>
+      
+
+      </footer>
+  </body>
+      
+</html> 

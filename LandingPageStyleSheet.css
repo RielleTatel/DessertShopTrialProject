@@ -1,0 +1,332 @@
+* {
+    transition: 500ms;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'bold';
+    src: url('assets/fonts/MagilioRegular1.otf'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@keyframes fallingAnimation {
+    0% {
+        transform: translateY(-200%);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+body {
+    background-color: beige;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.content-imageContainer {
+    position: absolute; /* Keep the image container absolutely positioned */
+    top: -190px; /* Adjust this value to move the image up or down */
+    right: -20%;
+    width: 750px;
+    height: 750px;
+    z-index: -5; /* Set a lower z-index to place it behind the text */
+}
+
+.content-imageContainer img {
+    width: 100%; 
+    height: auto; 
+
+}
+/*************** navBar ****************/
+
+.navBar {
+    width: 100%;
+    height: 10vh;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    z-index: 2; /* Set a higher z-index to make sure the navbar is above the image */
+    position: relative; 
+    left:-10vw;
+}
+
+.list-wrapper {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.list-wrapper .list-item {
+    margin: 0 20px;
+    list-style: none;
+    font-size: 1.5em;
+}
+
+.search-input {
+    background-color: #d2d2d2;
+    width: 13%;
+    height: 30%;
+    margin-left: 2%;
+    border-radius: 10px;
+    border: 1px #d2d2d2 solid;
+}
+
+/*************** navBar ****************/
+
+/*************** section ****************/
+.section {
+    background-color: d2d2d2;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.content {
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.contentStyle {
+    font-family: 'bold';
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Make this a positioning context */
+    background-color: beige;
+    font-size: 4em;
+    margin-bottom: 20%;
+    z-index: 1; /* Set a higher z-index to place the text above the image */
+}
+
+.contentStyle h1 {
+    margin: 0.5em;
+    font-size: 2em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+/*************** section ****************/
+
+
+/*************** Side Bar ****************/
+
+.sideBar{
+    box-sizing: border-box;
+    height: 75vh;
+    width: 1000px;
+    padding: 5px 1em;
+    border-right: 1px solid var(--line-clr);
+    transition: 300ms ease-in-out;
+    top: 0;
+    left: 5vh;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center; 
+    display: flex; 
+    background-color: white;
+    position: sticky;
+    align-self: start;
+    overflow: hidden;
+    text-wrap: nowrap;
+    position: relative; 
+    z-index: 7;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button-wrapper {
+    position: absolute; 
+    top: 10px; 
+    right: 10px; 
+}
+
+.sideBar.close {
+    padding: 5px;
+    width: 60px;
+} 
+
+.dropdown-btn {
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+
+.dropdown-btn img {
+    width: 30px;  /* Adjust the width as needed */
+    height: 30px; /* Adjust the height as needed */
+    transition: transform 0.3s; /* Add transition for rotation */
+}
+
+.cart-container {
+    margin-top: 25%;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(242, 242, 242, 0.1);
+    width: 100%;
+    align-self: flex-start;
+    background-color: white;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.cart-container.close {
+    transition: 200ms;
+    display: none;
+    opacity: 0; 
+    visibility: hidden; 
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid black;
+    font-size: 1em;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item-details {
+    display: flex;
+    align-items: center;
+}
+
+.cart-item-details input {
+    width: 50px;
+    text-align: center;
+    margin-right: 10px;
+    margin-left: 20px;
+    border: 1px solid #ccc;
+    background-color: rgb(240, 98, 240);
+    border-radius: 5px;
+}
+
+.cart-summary {
+    margin-top: 20px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.2em;
+}
+
+.button-sideBar {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    background-color: #8a8c8c;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#item-quantity {
+    width: 50px; /* Width of the quantity input */
+    text-align: center; /* Center text in the input */
+}
+
+.button-sideBar {
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+}
+
+.button-sideBar:hover {
+    background-color: #6a6c6c;
+}
+
+/*************** Side Bar ****************/
+
+.footer {
+    background-color: white;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer .soc1 {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.footer .soc1 a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer .soc1 a:hover {
+    color: black;
+    transform: scale(0.99);
+    border: 2px solid black;
+}
+
+
+/* Keyframes for the animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Apply fade-in effect on page load */
+body {
+    animation: fadeIn 1.5s ease-in-out; /* Fades in the entire page */
+}
+
+/* Slide-in effect for the content image */
+.content-imageContainer img {
+    animation: slideIn 1s ease-out;
+}
+

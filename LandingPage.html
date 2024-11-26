@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Micth's Dessert </title>
+    <link rel="stylesheet" href="LandingPageStyleSheet.css"> 
+    <!-- <link rel="stylesheet" href="diag.css">  -->
+</head>
+<script> 
+
+    window.addEventListener('load', () => {
+    // Trigger a fade-in animation for the whole body
+    document.body.style.animation = "fadeIn 1.5s ease-in-out";
+
+    // Apply a slide-in effect to the content image
+    const image = document.querySelector('.content-imageContainer img');
+    if (image) {
+        image.style.animation = "slideIn 1s ease-out";
+    } else {
+        console.warn('Element with class "content-imageContainer img" not found.');
+    }
+});
+
+
+
+</script>
+<body>
+
+    <nav class="navBar"> 
+        <div class="background" style="background-color: aliceblue;"></div>
+        <h1 class="title-animation">MITCH'S DESSERTS</h1> 
+        <input class="search-input"> </input> 
+        <ul class="list-wrapper"> 
+            <li class="list-item"> 
+                <a href="LandingPage.html" style="text-decoration: none; color: black;" > Home </a>
+            </li>
+            <li class="list-item"> 
+                <a href="DessertSectionPage.html" style="text-decoration: none; color: black;" > Desserts </a>
+            </li>
+            <li class="list-item"> 
+                <a href="AboutMePage.html" style="text-decoration: none; color: black;" > About  </a>
+            </li>
+        </ul>
+
+    </nav>  
+
+    <div class="section"> 
+        <div class="sideBar" id="sidebar"> 
+            <div class="button-wrapper"> 
+                <button id="toggle-btn" onclick="toggleSidebar()" class="dropdown-btn"> 
+                    <img src="Assets/icons/picture/cart-shopping-solid.svg"> 
+                </button>
+            </div>
+            <div class="cart-container">
+                <h2>Your Cart</h2>
+
+                <div class="cart-item">
+                    <span>Choco Cake</span>
+                    <div class="cart-item-details">
+                        <input type="number" value="1" min="1" class="item-quantity" data-price="200">
+                        <span class="item-price">P60.00</span>
+                    </div>
+                </div>
+                
+                <div class="cart-item">
+                    <span>Cheesecake</span>
+                    <div class="cart-item-details">
+                        <input type="number" value="1" min="1" class="item-quantity" data-price="150">
+                        <span class="item-price">P60.00</span>
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <span>Brownies</span>
+                    <div class="cart-item-details">
+                        <input type="number" value="1" min="1" class="item-quantity" data-price="100">
+                        <span class="item-price">P60.00</span>
+                    </div>
+                </div>
+                <div class="cart-summary">
+                    <span> Total Quantity: <span id="total-quantity"> 3</span> </span>
+                    <span> Total Price: <span id="total-value"> P60.00</span> </span>
+                </div>
+                <button class="button-sideBar"> <a href="PaymentPage.html"> BUY </a> </button>
+            </div>
+        </div>
+        <div class="content"> 
+            <div class="contentStyle">
+                <h1>MITCH's  DESERTS</h1>
+                <div class="content-imageContainer">
+                    <img src="Assets/icons/picture/picture1.png" alt="Dessert Image">
+                </div>
+            </div>            
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <div class="soc1">
+            <a href="https://www.facebook.com/jededison.tenorio.7/" target="_blank"><i class='bx bxl-facebook'></i></a>
+            <a href="https://x.com/iSnipyy" target="_blank"><i class='bx bxl-twitter' ></i></a>
+            <a href="https://www.instagram.com/jeditnrio/" target="_blank"><i class='bx bxl-instagram' ></i></a>
+          </div>
+        <p> Copyright © 2024 Mitch's Cakes | All Rights Reserved </p>
+    
+        
+    </footer>
+
+    <script>
+        const toggleButton = document.getElementById('toggle-btn');
+        const sidebar = document.getElementById('sidebar');
+        const cart = document.querySelector('.cart-container');
+    
+        window.addEventListener('load', () => {
+            const image = document.getElementById('content-imageContainer');
+            if (image) {
+                image.style.animation = "fallingAnimation 1s ease-out";
+            } else {
+                console.warn('Element with ID "falling-image" not found.');
+            }
+        });
+    
+        function toggleSidebar() {
+            sidebar.classList.toggle('close');
+            toggleButton.classList.toggle('close');
+            cart.classList.toggle('close');
+        }
+    </script>
+</body>
+</html>
